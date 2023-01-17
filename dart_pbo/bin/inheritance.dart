@@ -1,36 +1,26 @@
-import 'gaming/hero.dart';
+import 'gaming/drink_abilty_mixin.dart';
+import 'gaming/flying_monster.dart';
+import 'gaming/knight.dart';
 import 'gaming/monster.dart';
 import 'gaming/monster_kecoak.dart';
 import 'gaming/monster_ubur.dart';
+import 'gaming/monsterucoa.dart';
 
 void main(List<String> args) async {
-  Hero h = Hero();
-  Monster m = Monster();
-  MonsterUbur u = MonsterUbur();
-
   List<Monster> monsters = [];
 
-  monsters.add(MonsterUbur());
-  monsters.add(MonsterKecoak());
-  monsters.add(MonsterUbur());
+  // monsters.add(MonsterUbur());
+  // monsters.add(MonsterKecoak());
+  // monsters.add(MonsterUcoa());
 
-  for (Monster m in monsters) {
-    if (m is MonsterUbur) {
-      print(m.swim());
-    }
-  }
-  print("\n=========================\n");
+  // print("\n===============  normal monster ===============\n");
 
-  h.healthpoint = 10;
-  m.healthpoint = -10;
-  u.healthpoint = 10;
+  // for (Monster m in monsters) {
+  //   if (m is DrinkAbilityMixin) {
+  //     print((m as DrinkAbilityMixin).drink());
+  //   }
+  // }
 
-  print("hero healthpoint " + h.healthpoint.toString());
-  print("monster healthpoint " + m.healthpoint.toString());
-  print("monster ubur healthpoint " + u.healthpoint.toString());
-
-  print(h.killMonster());
-  print(m.eatHuman());
-  print(u.eatHuman());
-  print(u.swim());
+  Knight k = Knight();
+  print(k.drink());
 }

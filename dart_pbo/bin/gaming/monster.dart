@@ -1,5 +1,7 @@
 import 'karakter.dart';
 
-class Monster extends Karakter {
+abstract class Monster extends Karakter {
   String eatHuman() => 'Grr.. Delicious.. Yummy..';
+
+  String move();
 }
